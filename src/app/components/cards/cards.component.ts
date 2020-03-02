@@ -13,7 +13,7 @@ export class CardsComponent {
 
   seeArtist( item: any ){
 
-    let artistId;
+    let artistId: any;
 
     if( item.type === 'artist' ){
       artistId = item.id;
