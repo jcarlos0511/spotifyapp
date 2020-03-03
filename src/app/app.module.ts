@@ -4,18 +4,23 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 
-
+//Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { _routes } from './app.routes';
-import { NoimagePipe } from './pipes/noimage.pipe';
 import { CardsComponent } from './components/cards/cards.component';
-import { LoadingComponent } from './components/shared/loading/loading.component'
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
-// import routes
+//Routes
+import { _routes } from './app.routes';
+
+//Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { DomSafePipe } from './pipes/dom-safe.pipe'
+
+
 
 @NgModule({
   declarations: [
@@ -26,12 +31,13 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     NavbarComponent,
     NoimagePipe,
     CardsComponent,
-    LoadingComponent
+    LoadingComponent,
+    DomSafePipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(_routes, { useHash: true})
+    RouterModule.forRoot(_routes, { useHash: true})// import routes
   ],
   providers: [],
   bootstrap: [AppComponent]

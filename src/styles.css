@@ -28,9 +28,7 @@ hr {
     vertical-align: middle !important;
 }
 
-th{
-    text-align: center !important;
-}
+
 
 .card-title,
 .card-text {
@@ -46,8 +44,24 @@ th{
 }
 
 .img-thumb {
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
+}
+
+/*Responsive iframe*/
+
+@media only screen and (max-width: 768px) {
+  iframe {
+      width: 80px;
+      height: 80px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  iframe {
+      width: 300px;
+      height: 80px;
+  }
 }
 
 
