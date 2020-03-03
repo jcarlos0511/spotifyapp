@@ -11,7 +11,7 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 export class ArtistComponent {
 
   artist: any = {};
-  topTracks: any = {};
+  topTracks: any[] = [];
   loading: boolean;
   
 
@@ -29,7 +29,7 @@ export class ArtistComponent {
 
   getArtist( id: string ){
     this.spotify.getArtist(id).subscribe( artist => {
-      //console.log(artist);
+      console.log(artist);
       this.artist = artist;
       this.loading = false;
     });
