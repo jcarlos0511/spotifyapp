@@ -7,8 +7,16 @@ import { DomSanitizer } from "@angular/platform-browser";
 export class DomSafePipe implements PipeTransform {
   constructor(private domSanitizer: DomSanitizer) {}
 
-  transform(value: string): any {
-    const url = 'https://open.spotify.com/embed?uri=';
-    return this.domSanitizer.bypassSecurityTrustResourceUrl(url + value);
+  transform(value: string, artist:boolean=true ): any {
+    if(artist){
+      const url = 'https://open.spotify.com/follow/1/?uri=';
+      const url2 = '&size=basic&theme=dark';
+      return this.domSanitizer.bypassSecurityTrustResourceUrl(url + value + url2);
+    }
+    else{
+      const url = 'https://open.spotify.com/embed?uri=';
+      return this.domSanitizer.bypassSecurityTrustResourceUrl(url + value);
+    }
+    
   }
 }

@@ -5,6 +5,7 @@
     </div>
     <div class="col">
         <h3>{{artist.name}}</h3>
+        <iframe class="follow" [src]=" artist.uri | domSafe: true " scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
         <p><i>{{ artist.genres[0] | titlecase }}, {{ artist.genres[1] | titlecase }}</i></p>
         <a class="btn btn-dark btn-sm" role="button" [href]="artist.external_urls.spotify" target="_blank">
             Go to artist ...</a>
@@ -19,7 +20,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Photo</th>
+                    <th class="no-photo">Photo</th>
                     <th>Album</th>
                     <th>Song</th>
                     <th>Preview</th>
@@ -27,11 +28,11 @@
             </thead>
             <tbody>
                 <tr *ngFor="let topTrack of topTracks">
-                    <td><img  [src]="topTrack.album.images | noimage " class="img-thumb"></td>
+                    <td class="no-photo"><img  [src]="topTrack.album.images | noimage " class="img-thumb "></td>
                     <td>{{ topTrack.album.name }}</td>
                     <td>{{ topTrack.name}}</td>
                     <td><!--<audio [src]="topTrack.preview_url" controls></audio>-->
-                        <iframe [src]=" topTrack.uri | domSafe " frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <iframe class="iframe" [src]=" topTrack.uri | domSafe: false " frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </td>
                 </tr>
             </tbody>
