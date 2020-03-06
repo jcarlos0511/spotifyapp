@@ -1,0 +1,21 @@
+<div class="row mt-5">
+  <div class="col">
+    <input #term type="text" (keyup)='search(term.value)' class="form-control animated fadeIn" placeholder="search song...">
+  </div>
+</div>
+<div class="card-columns mt-5 animated fadeIn">
+
+    <div (click)='seeSong(song.id)' *ngFor="let song of songs" class="card pointer">
+        <!--<img [src]="item.images | noimage " class="card-img-top" alt="...">-->
+        <div class="card-body">
+            <h5 class="card-title">{{ song.name }}</h5>
+            <p class="card-text">
+                <span  class="badge badge-pill badge-primary">{{ song.artists[0].name }}
+                </span>
+                <!--<span class="badge badge-pill badge-success">{{ item.genres[0] }}</span>
+                <span class="badge badge-pill badge-primary">{{ item.genres[1] }}</span>
+                <span class="badge badge-pill badge-info">{{ item.genres[2] }}</span>-->
+            </p>
+        </div>
+    </div>
+</div>

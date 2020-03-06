@@ -18,7 +18,9 @@ import { _routes } from './app.routes';
 
 //Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
-import { DomSafePipe } from './pipes/dom-safe.pipe'
+import { DomSafePipe } from './pipes/dom-safe.pipe';
+import { SongComponent } from './components/song/song.component';
+import { SongsComponent } from './components/songs/songs.component'
 
 
 
@@ -32,7 +34,9 @@ import { DomSafePipe } from './pipes/dom-safe.pipe'
     NoimagePipe,
     CardsComponent,
     LoadingComponent,
-    DomSafePipe
+    DomSafePipe,
+    SongComponent,
+    SongsComponent
   ],
   imports: [
     BrowserModule,
