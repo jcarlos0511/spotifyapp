@@ -6,7 +6,7 @@
 <div class="card-columns mt-5 animated fadeIn">
 
     <div (click)='seeSong(song.id)' *ngFor="let song of songs" class="card pointer">
-        <!--<img [src]="item.images | noimage " class="card-img-top" alt="...">-->
+        <img [src]="song.album.images | noimage " class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ song.name }}</h5>
             <p class="card-text">

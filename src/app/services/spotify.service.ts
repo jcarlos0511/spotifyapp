@@ -14,7 +14,7 @@ export class SpotifyService {
 
     const headers = new HttpHeaders({
       Authorization:
-        "Bearer BQATmLVMdy5205bdMG4XN_XB39Wx6WikMXvEZc3jR9bGfw87zlQNrl5P7XbfQfuQlChACbWFhmdllRt7H7g"
+        "Bearer BQDg-QSWuEn_r1efozjk6zDbljJm1zhGGDLq01mMwaBxB4jeyjKeJZt-o3MIEqbQrraBZQXOdQiLRpxpvPs"
     });
 
     return this.http.get(url, { headers });
@@ -69,4 +69,11 @@ export class SpotifyService {
       })
     );
   }
+
+  getSong(id: string) {
+    return this.getQuery(
+      `tracks/${id}?market=US`
+    );
+  }
+
 }

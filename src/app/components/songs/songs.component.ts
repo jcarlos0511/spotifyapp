@@ -23,7 +23,7 @@ export class SongsComponent  {
   }
   
   seeSong(item: any) {
-    console.log(item);
+    //console.log(item);
     this.router.navigate(["/song", item]);
   }
 }

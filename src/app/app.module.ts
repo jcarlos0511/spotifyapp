@@ -12,6 +12,8 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { SongComponent } from './components/song/song.component';
+import { SongsComponent } from './components/songs/songs.component';
 
 //Routes
 import { _routes } from './app.routes';
@@ -19,8 +21,7 @@ import { _routes } from './app.routes';
 //Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { DomSafePipe } from './pipes/dom-safe.pipe';
-import { SongComponent } from './components/song/song.component';
-import { SongsComponent } from './components/songs/songs.component'
+import { DomSafe2Pipe } from './pipes/dom-safe2.pipe'
 
 
 
@@ -36,7 +37,8 @@ import { SongsComponent } from './components/songs/songs.component'
     LoadingComponent,
     DomSafePipe,
     SongComponent,
-    SongsComponent
+    SongsComponent,
+    DomSafe2Pipe
   ],
   imports: [
     BrowserModule,

@@ -52,6 +52,8 @@ hr {
     width: 180px;
     height: 56px;
 }
+
+
 /*Responsive */
 
 @media only screen and (max-width: 424px) {

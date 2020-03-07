@@ -15,11 +15,11 @@ export class ArtistComponent {
   loading: boolean;
   
 
-  constructor( private _route: ActivatedRoute, private spotify: SpotifyService ) { 
+  constructor( private route: ActivatedRoute, private spotify: SpotifyService ) { 
 
     this.loading = true;
 
-    this._route.params.subscribe( params =>{
+    this.route.params.subscribe( params =>{
       //console.log(params['id']);
       this.getArtist( params['id'] );
       this.getTopTracks( params['id']);
