@@ -1,17 +1,20 @@
 <div class="row animated fadeIn mt-5">
-    
-    <div class="col">
-        <iframe [src]=" song.artists[0].uri | domSafe2:true " width="300" height="56" scrolling="no" frameborder="0" 
+
+    <div class="col" >
+        <div class="row m-1" *ngFor="let item of song.artists">
+           <iframe [src]=" item.uri | domSafe2:true " width="300" height="56" scrolling="no" frameborder="0"
             style="border:none; overflow:hidden;" allowtransparency="true">
-        </iframe>
+        </iframe> 
+        </div>
+        
     </div>
     <div class="col ">
-         <h3>{{song.name}}</h3>
-        <h4><i *ngFor="let item of song.artists">{{item.name}},  </i></h4>
-        
+        <h3>{{song.name}}</h3>
+        <h4><i *ngFor="let item of song.artists">{{item.name}}, </i></h4>
+
 
         <!--<p><i>{{ song.genres[0] | titlecase }}, {{ song.genres[1] | titlecase }}</i></p>-->
-        
+
         <button routerLink="/songs" type="button" class="btn btn-success btn-center">Back</button>
     </div>
 </div>
@@ -27,7 +30,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr >
+                <tr>
                     <td class="no-photo"><img [src]="song.album.images | noimage " class="img-thumb "></td>
                     <td>{{ song.album.name }}</td>
                     <td>{{ song.name}}</td>
