@@ -9,14 +9,15 @@
             style="border:none; overflow:hidden;" allowtransparency="true">
         </iframe>
         <p><i>{{ artist.genres[0] | titlecase }}, {{ artist.genres[1] | titlecase }}</i></p>
-        <a class="btn btn-success btn-sm  " role="button" [href]="artist.external_urls.spotify" target="_blank">
-            <span btn-ico>
-                <i class="fab fa-spotify fa-1x "></i><span class="btn-text">artist profile</span>
-            </span>
+        <a class="btn-successfull " title="Profile on Spotify" role="button" [href]="artist.external_urls.spotify" target="_blank">
+            
+                <i class="fab fa-spotify fa-1x "></i><span class="btn-text">profile</span>
+            
         </a>
     </div>
     <div class="col-3 ">
-        <button routerLink="/search" type="button" class="btn btn-success btn-center">Back</button>
+        <button routerLink="/search" type="button" class="btn-successfull">
+            <i class="fab fa-spotify fa-1x "></i><span class="btn-text">Back</span></button>
     </div>
 </div>
 

@@ -39,8 +39,31 @@ hr {
     margin-left: 5px;
 }
 
-.btn-outline-success {
-    margin-left: 5px;
+.btn-successfull{
+    background: #2ebd59 !important;
+    border-radius: 500px;
+    color: #fff;    
+    min-width: 92px;
+    position: relative !important;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 10px 0 0;
+    float: left;
+    text-decoration: none !important;
+}
+.btn-successfull:hover{
+    background: #1ed760 !important;
+    color: #fff;
+}
+
+
+.btn-text{
+    font-family: Lucida Grande,Tahoma,Calibri,Arial,sans-serif !important;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    margin-left: 3px;
+    font-size: 11px;
+    padding: 4px 4px 3px 8px !important;
 }
 
 .img-thumb {
