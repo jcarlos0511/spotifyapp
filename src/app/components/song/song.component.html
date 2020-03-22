@@ -1,21 +1,18 @@
 <div class="row animated fadeIn mt-5">
 
-    <div class="col" >
-        <div class="row m-1" *ngFor="let item of song.artists">
-           <iframe [src]=" item.uri | domSafe2:true " width="300" height="56" scrolling="no" frameborder="0"
-            style="border:none; overflow:hidden;" allowtransparency="true">
-        </iframe> 
-        </div>
-        
+    <h3 class="inline-block w100 mb-5">{{song.name}}</h3>
+
+    <div class="col " *ngFor="let item of song.artists">
+        <iframe class=" mx-auto d-block" [src]=" item.uri | domSafe2:true " width="300" height="56" scrolling="no" frameborder="0"
+            style="border:none; overflow:hidden;width: 14rem;" allowtransparency="true">
+        </iframe>
     </div>
+
     <div class="col ">
-        <h3>{{song.name}}</h3>
-        <h4><i *ngFor="let item of song.artists">{{item.name}}, </i></h4>
-
-
         <!--<p><i>{{ song.genres[0] | titlecase }}, {{ song.genres[1] | titlecase }}</i></p>-->
-
-        <button routerLink="/songs" type="button" class="btn btn-success btn-center">Back</button>
+        <button routerLink="/songs" type="button" class="btn-successfull " >
+            <i class="fab fa-spotify fa-1x "></i><span class="btn-text">Back</span>
+        </button>
     </div>
 </div>
 <div class="row mt-5 animated fadeIn fast">

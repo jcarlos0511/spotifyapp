@@ -14,7 +14,7 @@ export class SpotifyService {
 
     const headers = new HttpHeaders({
       Authorization:
-        "Bearer BQA_Nvx4j_SUJeCQVPheMiBuDsZ40xZtSeyvHOrNBvv1OEKo4Zga7gXQVA2c0X9_iuaAa1hIySc3lM__qEI"
+        "Bearer 'token here' "
     });
 
     return this.http.get(url, { headers });
@@ -23,7 +23,7 @@ export class SpotifyService {
   getNewReleases() {
     /*const headers = new HttpHeaders({
       Authorization:
-        "Bearer BQA9_Ki-_Go_BBNw0H58Wpw6OyxZiDZIgjB8Z1-xGfJMNxiGmbQnSLFVxNJiGPWHHG3BoqCMXsA7Cw9Ut-w"
+        "Bearer 'token here' "
     });*/
     return this.getQuery("browse/new-releases?limit=20").pipe(
       map(data => {
@@ -35,7 +35,7 @@ export class SpotifyService {
   getArtists(term: string) {
     /*const headers = new HttpHeaders({
       Authorization:
-        "Bearer BQA9_Ki-_Go_BBNw0H58Wpw6OyxZiDZIgjB8Z1-xGfJMNxiGmbQnSLFVxNJiGPWHHG3BoqCMXsA7Cw9Ut-w"
+        "Bearer 'token here' "
     });*/
     return this.getQuery(`search?q=${term}&type=artist&limit=15`).pipe(
       map(data => {
