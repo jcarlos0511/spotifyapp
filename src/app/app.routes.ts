@@ -8,7 +8,7 @@ import { SongComponent } from './components/song/song.component';
 export const _routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "search", component: SearchComponent },
-  { path: "artist/:id", component: ArtistComponent },
+  { path: "artist/:id/:name", component: ArtistComponent },
   { path: "songs", component: SongsComponent },
   { path: "song/:id", component: SongComponent },
   { path: "", pathMatch: "full", redirectTo: "home" },

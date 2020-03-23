@@ -81,8 +81,13 @@ export class SpotifyService {
 
   /* Wikipedia */
 
-  getDescription(artistName: any) {
-    return this.getWiki(artistName);
+  getDescription(name: any) {
+    return this.getWiki(name);
+  }
+
+  //remove the html that comes in the wikipedia API
+  removeHtml(value:string){
+    return value.replace(/<\/?[^>]+>/gi, '');
   }
 
   /* for Songs.Component */

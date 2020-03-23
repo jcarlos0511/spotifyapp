@@ -13,6 +13,7 @@ export class ArtistComponent {
   artist: any = {};
   topTracks: any[] = [];
   loading: boolean;
+  bio: any= [];
   
 
   constructor( private route: ActivatedRoute, private spotify: SpotifyService ) { 
@@ -23,9 +24,11 @@ export class ArtistComponent {
       //console.log(params['id']);
       this.getArtist( params['id'] );
       this.getTopTracks( params['id']);
+      this.getDescription( params['name']);
       
     });
   }
+
   /* from Spotify */
 
   getArtist( id: string ){
@@ -43,4 +46,12 @@ export class ArtistComponent {
     });
   }
 
+  /* from Wikipedia */
+  getDescription( name: string ){
+
+    this.spotify.getDescription(name).subscribe( (artist: any) =>{
+      console.log(artist.query.search[0].snippet);
+      this.bio = this.spotify.removeHtml(artist.query.search[0].snippet);
+    })
+  }
 }

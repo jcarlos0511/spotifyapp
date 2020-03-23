@@ -6,6 +6,8 @@
         <img [src]="artist.images | noimage " class="img-circle">
     </div>
     <div class="col-8">
+
+        <p>{{bio}}</p>
         
         <iframe class=" d-block follow " [src]=" artist.uri | domSafe: true " scrolling="no" frameborder="0"
             style="border:none; overflow:hidden;width: 14rem;" allowtransparency="true">

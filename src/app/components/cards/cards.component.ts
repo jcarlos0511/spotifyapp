@@ -12,14 +12,17 @@ export class CardsComponent {
 
   seeArtist(item: any) {
     let artistId: any;
+    let nameId: any;
 
     if (item.type === "artist") {
       artistId = item.id;
+      nameId = item.name;
     } else {
       artistId = item.artists[0].id;
+      nameId = item.artists[0].name;
     }
-    //console.log(artistId);
-    this.router.navigate(["/artist", artistId]);
+    //console.log(artistId,nameId);
+    this.router.navigate(["/artist", artistId, nameId]);
   }
 
 
