@@ -1,20 +1,29 @@
 <div class="row animated fadeIn mt-5">
 
-    <h3 class="inline-block w100 mb-5">{{song.name}}</h3>
+    <h3 class="inline-block w100 mb-5">{{song.name}} ({{song.album.release_date | date: 'y'}})</h3>
 
-    <div class="col " *ngFor="let item of song.artists">
-        <iframe class=" mx-auto d-block" [src]=" item.uri | domSafe2:true " width="300" height="56" scrolling="no" frameborder="0"
+    <div class="col" *ngFor="let item of song.artists">
+
+        <iframe class="mb-3 mx-auto d-block" [src]=" item.uri | domSafe2:true " width="300" height="56" scrolling="no" frameborder="0"
             style="border:none; overflow:hidden;width: 14rem;" allowtransparency="true">
         </iframe>
+
     </div>
 
-    <div class="col ">
+    
+</div>
+
+<div class="row mt-5 animated fadeIn fast">
+
+    <div class="col">
         <!--<p><i>{{ song.genres[0] | titlecase }}, {{ song.genres[1] | titlecase }}</i></p>-->
         <button routerLink="/songs" type="button" class="btn-successfull " >
             <i class="fab fa-spotify fa-1x "></i><span class="btn-text">Back</span>
         </button>
     </div>
+
 </div>
+
 <div class="row mt-5 animated fadeIn fast">
     <div class="col">
         <table class="table">

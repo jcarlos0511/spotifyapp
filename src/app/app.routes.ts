@@ -1,6 +1,6 @@
 import { Routes } from "@angular/router";
 import { HomeComponent } from "./components/home/home.component";
-import { SearchComponent } from "./components/search/search.component";
+import { SearchComponent } from "./components/artists/search.component";
 import { ArtistComponent } from "./components/artist/artist.component";
 import { SongsComponent } from "./components/songs/songs.component";
 import { SongComponent } from './components/song/song.component';

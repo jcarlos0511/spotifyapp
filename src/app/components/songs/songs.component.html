@@ -5,18 +5,10 @@
 </div>
 <div class="card-columns mt-5 animated fadeIn">
 
-    <div (click)='seeSong(song.id)' *ngFor="let song of songs" class="card pointer">
+    <div (click)='seeSong(song.id)' *ngFor="let song of songs, let i = index" class="card pointer">
         <img [src]="song.album.images | noimage " class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ song.name }}</h5>
-            <p class="card-text">
-                <span  class="badge badge-pill badge-primary">{{ song.artists[0].name }}
-                </span>
-
-                <span class="badge badge-pill badge-success">{{ song.artists[1].name }}</span>
-            
-                <span class="badge badge-pill badge-info">{{ song.artists[2].name }}</span>
-            </p>
         </div>
     </div>
 </div>

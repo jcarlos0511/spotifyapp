@@ -9,16 +9,28 @@ import { map } from "rxjs/operators";
 export class SpotifyService {
   constructor(private http: HttpClient) {}
 
+  /* for Spotify */
+
   getQuery(query: string) {
     const url = `https://api.spotify.com/v1/${query}`;
 
     const headers = new HttpHeaders({
       Authorization:
-        "Bearer 'token here' "
+        "Bearer BQAZUaeFL3Qz0wz7c6Pzh4mze5AKgSX_8pELNHQjndWM2HcmSVuoljgUSImiPSPa5SOouuZe8V7xe8kQI14"
     });
 
     return this.http.get(url, { headers });
   }
+
+  /* for Wikipedia */
+
+  getWiki( wiki: string ) {
+    const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=`;
+    const url2 = `%20artist&utf8=&format=json&origin=*`;
+    return this.http.get(url + wiki + url2);
+  }
+
+  /* for Home.Component */
 
   getNewReleases() {
     /*const headers = new HttpHeaders({
@@ -32,6 +44,8 @@ export class SpotifyService {
     );
   }
 
+  /*for Search.Component */
+
   getArtists(term: string) {
     /*const headers = new HttpHeaders({
       Authorization:
@@ -44,6 +58,9 @@ export class SpotifyService {
     );
   }
 
+  /* for Artist.component */
+
+  /* Spotify */
   getArtist(id: string) {
     return this.getQuery(
       `artists/${id}`
@@ -62,18 +79,25 @@ export class SpotifyService {
     );
   }
 
+  /* Wikipedia */
+
+  getDescription(artistName: any) {
+    return this.getWiki(artistName);
+  }
+
+  /* for Songs.Component */
+
   getSongs(term: string) {
-    return this.getQuery(`search?q=${term}&type=track&market=US&limit=10`).pipe(
+    return this.getQuery(`search?q=${term}&type=track&market=US&limit=3`).pipe(
       map(data => {
-        return data['tracks'].items; // reduce the object to a specific one
+        return data["tracks"].items; // reduce the object to a specific one
       })
     );
   }
 
-  getSong(id: string) {
-    return this.getQuery(
-      `tracks/${id}?market=US`
-    );
-  }
+  /* for Song.Component */
 
+  getSong(id: string) {
+    return this.getQuery(`tracks/${id}?market=US`);
+  }
 }

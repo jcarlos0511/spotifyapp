@@ -1,150 +1,143 @@
 /* You can add global styles to this file, and also import other style files */
 
 #body {
-    background-color: black;
-    color: white !important;
+  background-color: black;
+  color: white !important;
 }
 
 hr {
-    border-color: white;
+  border-color: white;
 }
 
 .pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .img-circle {
-    border-radius: 100%;
-    width: 100%;
-    height: auto;
+  border-radius: 100%;
+  width: 100%;
+  height: auto;
 }
-
 
 .table {
-    color: white !important;
+  color: white !important;
 }
 
-.table td{
-    vertical-align: middle !important;
+.table td {
+  vertical-align: middle !important;
 }
-
-
 
 .card-title,
 .card-text {
-    color: black;
+  color: black;
 }
 
 .badge {
-    margin-left: 5px;
+  margin-left: 5px;
 }
-.w100{
-    width: 100%;
-    text-align: center;
-}
-
-.center{
-    margin: 0 auto;
-    width: 90%;
+.w100 {
+  width: 100%;
+  text-align: center;
 }
 
-.btn-successfull{
-    background: #2ebd59 !important;
-    border-radius: 500px;
-    color: #fff;    
-    position: relative !important;
-    text-align: center;
-    white-space: nowrap;
-    float: left;
-    text-decoration: none !important;
-    border: none;
-    padding-top: 0px;
-}
-.btn-successfull:hover{
-    background: #1ed760 !important;
-    color: #fff;
+.center {
+  margin: 0 auto;
+  width: 90%;
 }
 
+.btn-successfull {
+  background: #2ebd59 !important;
+  border-radius: 500px;
+  color: #fff;
+  position: relative !important;
+  text-align: center;
+  white-space: nowrap;
+  float: left;
+  text-decoration: none !important;
+  border: none;
+  padding-top: 0px;
+}
+.btn-successfull:hover {
+  background: #1ed760 !important;
+  color: #fff;
+}
 
-.btn-text{
-    font-family: Lucida Grande,Tahoma,Calibri,Arial,sans-serif !important;
-    text-transform: uppercase; 
-    letter-spacing: 1px;
-    margin-left: 3px;
-    font-size: 11px;
-    margin: auto 12px auto 12px;
+.btn-text {
+  font-family: Lucida Grande, Tahoma, Calibri, Arial, sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 3px;
+  font-size: 11px;
+  margin: auto 12px auto 12px;
 }
 
 .img-thumb {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
-.follow{
-    width: 180px;
-    height: 56px;
+.follow {
+  width: 180px;
+  height: 56px;
 }
-
 
 /*Responsive */
 
 @media only screen and (max-width: 424px) {
-    .follow{
-width: 130px;
+  .follow {
+    width: 130px;
     height: 56px;
-}
- .no-photo{
+  }
+  .no-photo {
     display: none;
-}
-.iframe {
-      width: 50px;
-      height: 50px;
+  }
+  .iframe {
+    width: 50px;
+    height: 50px;
   }
 }
-
 
 /*Responsive iframe*/
 
 @media only screen and (max-width: 768px) {
   .iframe {
-      width: 80px;
-      height: 80px;
+    width: 80px;
+    height: 80px;
   }
 }
 
 @media only screen and (min-width: 769px) {
   .iframe {
-      width: 300px;
-      height: 80px;
+    width: 300px;
+    height: 80px;
   }
 }
-
 
 /* Animaciones */
 
 .animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .fast {
-    -webkit-animation-duration: 0.4s;
-    animation-duration: 0.4s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .fadeIn {
-    animation-name: fadeIn;
+  animation-name: fadeIn;
 }

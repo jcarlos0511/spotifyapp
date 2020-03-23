@@ -21,4 +21,9 @@ export class SearchComponent {
       this.loading = false;
     });
   }
+
+  /*from wikipedia */
+
+  
+
 }
