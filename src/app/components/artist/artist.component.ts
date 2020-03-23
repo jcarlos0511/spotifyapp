@@ -14,6 +14,7 @@ export class ArtistComponent {
   topTracks: any[] = [];
   loading: boolean;
   bio: any= [];
+  pageId: any;
   
 
   constructor( private route: ActivatedRoute, private spotify: SpotifyService ) { 
@@ -50,8 +51,14 @@ export class ArtistComponent {
   getDescription( name: string ){
 
     this.spotify.getDescription(name).subscribe( (artist: any) =>{
-      console.log(artist.query.search[0].snippet);
+      console.log(artist);
       this.bio = this.spotify.removeHtml(artist.query.search[0].snippet);
+      this.pageId = artist.query.search[0];
     })
+  }
+  seeWiki(idPage:any){
+  
+    this.pageId= this.spotify.seeWiki(idPage);
+    console.log(this.pageId);   
   }
 }

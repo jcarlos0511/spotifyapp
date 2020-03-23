@@ -5,13 +5,14 @@
     <div class="col-4">
         <img [src]="artist.images | noimage " class="img-circle">
     </div>
-    <div class="col-8">
+    <div class="col-8 animated fadeIn fast">
 
-        <p>{{bio}}</p>
+        <p>{{bio}} <a (click)="seeWiki(pageId.pageid)" href={{pageId}}  target="_blank" rel="noopener noreferrer">... see more</a> </p>
         
         <iframe class=" d-block follow " [src]=" artist.uri | domSafe: true " scrolling="no" frameborder="0"
             style="border:none; overflow:hidden;width: 14rem;" allowtransparency="true">
         </iframe>
+
 
         <p><i>{{ artist.genres[0] | titlecase }}, {{ artist.genres[1] | titlecase }}</i></p>
 
@@ -26,7 +27,7 @@
    
 </div>
 
-<div class="row">
+<div class="row animated fadeIn ">
 
  <div class="col ">
 
@@ -37,7 +38,7 @@
 
 </div>
 
-<div class="row mt-5 animated fadeIn fast">
+<div class="row mt-5 animated fadeIn ">
     <div class="col">
         <table class="table">
             <thead>

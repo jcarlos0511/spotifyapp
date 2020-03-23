@@ -16,7 +16,7 @@ export class SpotifyService {
 
     const headers = new HttpHeaders({
       Authorization:
-        "Bearer BQAZUaeFL3Qz0wz7c6Pzh4mze5AKgSX_8pELNHQjndWM2HcmSVuoljgUSImiPSPa5SOouuZe8V7xe8kQI14"
+        "Bearer BQBMAxTyJ4j8vAoR5gbhS5Fh8-v4oTOIrKMCwKTvA6NTtzFp_BGvpNbepeC7SoAmsT_iB3Pq8C7Od6MJ4s8"
     });
 
     return this.http.get(url, { headers });
@@ -28,6 +28,11 @@ export class SpotifyService {
     const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=`;
     const url2 = `%20artist&utf8=&format=json&origin=*`;
     return this.http.get(url + wiki + url2);
+  }
+
+  seeWiki( id: any ){
+    const url = `https://en.wikipedia.org/?curid=${id}`;
+    return url;
   }
 
   /* for Home.Component */
