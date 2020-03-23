@@ -7,8 +7,9 @@
     </div>
     <div class="col-8 animated fadeIn fast">
 
-        <p>{{bio}} <a (click)="seeWiki(pageId.pageid)" href={{pageId}}  target="_blank" rel="noopener noreferrer">... see more</a> </p>
-        
+        <p>{{bio}} <a (click)="seeWiki(pageId.pageid)" href={{pageId}} target="_blank" rel="noopener noreferrer">... see
+                more</a> </p>
+
         <iframe class=" d-block follow " [src]=" artist.uri | domSafe: true " scrolling="no" frameborder="0"
             style="border:none; overflow:hidden;width: 14rem;" allowtransparency="true">
         </iframe>
@@ -16,20 +17,20 @@
 
         <p><i>{{ artist.genres[0] | titlecase }}, {{ artist.genres[1] | titlecase }}</i></p>
 
-     <a [href]="artist.external_urls.spotify" target="_blank" type="button">            
-                <button  title="Profile on Spotify"  class="btn-successfull">
+        <a [href]="artist.external_urls.spotify" target="_blank" type="button">
+            <button title="Profile on Spotify" class="btn-successfull">
                 <i class="fab fa-spotify fa-1x "></i>
                 <span class="btn-text">profile</span>
             </button>
         </a>
-        
+
     </div>
-   
+
 </div>
 
 <div class="row animated fadeIn ">
 
- <div class="col ">
+    <div class="col ">
 
         <button routerLink="/search" type="button" class="btn-successfull">
             <i class="fab fa-spotify fa-1x "></i><span class="btn-text">Back</span>
