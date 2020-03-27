@@ -2,11 +2,11 @@ import { Component } from "@angular/core";
 import { SpotifyService } from "src/app/services/spotify.service";
 
 @Component({
-  selector: "app-search",
-  templateUrl: "./search.component.html",
+  selector: "app-artists",
+  templateUrl: "./artists.component.html",
   styles: []
 })
-export class SearchComponent {
+export class ArtistsComponent {
   artists: any[] = [];
   loading: boolean;
 
@@ -23,7 +23,5 @@ export class SearchComponent {
   }
 
   /*from wikipedia */
-
-  
 
 }

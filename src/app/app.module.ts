@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 //Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { SearchComponent } from './components/artists/search.component';
+import { ArtistsComponent } from './components/artists/artists.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { CardsComponent } from './components/cards/cards.component';
@@ -30,7 +30,7 @@ import { FooterComponent } from './components/shared/footer/footer.component'
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchComponent,
+    ArtistsComponent,
     ArtistComponent,
     NavbarComponent,
     NoimagePipe,
