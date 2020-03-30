@@ -11,13 +11,19 @@ export class SongsComponent  {
 
   songs: any[] = [];
 
-  constructor( private spotify: SpotifyService, private router: Router) { }
+  constructor( private spotify: SpotifyService, private router: Router) { 
+
+    this.loadStorage();
+
+  }
 
   search(term: string) {
     console.log(term);
     this.spotify.getSongs(term).subscribe((data:any)=>{
       console.log(data);
       this.songs = data;
+
+      this.saveStorage();
     });
     
   }
@@ -26,4 +32,26 @@ export class SongsComponent  {
     //console.log(item);
     this.router.navigate(["/song", item]);
   }
+
+  // LocalStorage
+
+  saveStorage() {
+
+    localStorage.setItem('songs', JSON.stringify(this.songs) );
+
+  }
+
+  loadStorage() {
+
+    if( localStorage.getItem('songs')){
+
+      this.songs = JSON.parse(localStorage.getItem('songs')) ;
+
+    }else{
+
+      this.songs = [];
+
+    }
+  }
+
 }

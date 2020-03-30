@@ -16,7 +16,7 @@ export class SpotifyService {
 
     const headers = new HttpHeaders({
       Authorization:
-        "Bearer BQCW3azqdC4Nw3zmqJEC2ZAtZW1zfcAlf5aybyX7LUQVq0XtIy_tcbT80bhD0mpeFr9Mwf1pk2hwTCfDS3k"
+        "Bearer your token here"
     });
 
     return this.http.get(url, { headers });
@@ -49,7 +49,7 @@ export class SpotifyService {
     );
   }
 
-  /*for Search.Component */
+  /*for Artists.Component */
 
   getArtists(term: string) {
     /*const headers = new HttpHeaders({
@@ -110,4 +110,6 @@ export class SpotifyService {
   getSong(id: string) {
     return this.getQuery(`tracks/${id}?market=US`);
   }
+
+  
 }
