@@ -22,7 +22,8 @@ import { _routes } from './app.routes';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { DomSafePipe } from './pipes/dom-safe.pipe';
 import { DomSafe2Pipe } from './pipes/dom-safe2.pipe';
-import { FooterComponent } from './components/shared/footer/footer.component'
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { TruncatePipe } from './pipes/truncate.pipe'
 
 
 
@@ -40,7 +41,8 @@ import { FooterComponent } from './components/shared/footer/footer.component'
     SongComponent,
     SongsComponent,
     DomSafe2Pipe,
-    FooterComponent
+    FooterComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,

@@ -98,7 +98,7 @@ export class SpotifyService {
   /* for Songs.Component */
 
   getSongs(term: string) {
-    return this.getQuery(`search?q=${term}&type=track&market=US&limit=3`).pipe(
+    return this.getQuery(`search?q=${term}&type=track&market=US&limit=10`).pipe(
       map(data => {
         return data["tracks"].items; // reduce the object to a specific one
       })

@@ -8,7 +8,7 @@
     <div (click)='seeSong(song.id)' *ngFor="let song of songs, let i = index" class="card pointer">
         <img [src]="song.album.images | noimage " class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{ song.name }}</h5>
+            <h5 class="card-title">{{ song.name | truncate : "30"}}</h5>
         </div>
     </div>
 </div>
